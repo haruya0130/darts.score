@@ -1,0 +1,18 @@
+.todo-item{
+    text-decoration:none;
+    list-style: none;
+    text-decoration: underline;
+}
+.main{
+    display: flex;
+    justify-content: center;
+}
+.sideber{
+padding: 60px 40px;
+color: white;
+}
+.score{
+    padding: 10px;
+    color: white;
+
+}

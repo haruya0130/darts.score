@@ -1,0 +1,208 @@
+<html　class="html">
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta name='robots' content='noindex,nofollow'>
+  <link rel="stylesheet" href="{{url_for('static',filename='countup.css')}}">
+<link rel="stylesheet" href="/static/countup.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+<main class="main">
+
+<div class="score">
+<form class=""action="{{url_for('Countup')}}" method="POST">
+     <input type="text" name="text" required>
+     <button class="btn btn-primary" >送信</button>
+</form>
+
+
+<table >
+  <tr class="title">
+      <td style="text-align: center;">点数</td>
+    <td>
+  </tr>
+
+<tr class="name">
+ 
+  {% for count in counts %}
+  <!-- 隠しパラメータでidを置いておく -->
+<!--  -->
+  <li class="todo-item">
+      <td>
+    <a href="/{{count}}">{{count}}</a>
+  </td>
+ <!--/counts/destroy/{{id}} -->
+<form action="/counts/destroy/{{count}}" method="POST">
+  <td>
+  <button class="todo-button" >削除</button>
+</td>
+    
+</td>
+</tr>
+</form>
+
+  </li>
+  {% endfor %}
+</table>
+</div>
+<div class="sideber">
+    <table>
+        <tr>
+          <th>
+            平均点
+          </th>
+          <th>
+            レーティング
+          </th>
+        </tr>
+      <tr>
+        <td>
+          0
+        </td>
+        <td class="rate">
+          1
+        </td>
+      </tr>
+      <tr>
+        <td>
+          320
+        </td>
+        <td class="rate">
+          2
+        </td>
+      </tr>
+        <tr>
+          <td>
+            360
+          </td>
+          <td class="rate">
+            3
+          </td>
+        </tr>
+        <tr>
+          <td>
+            400
+          </td>
+          <td class="rate">
+            4
+          </td>
+        </tr>
+        <tr>
+          <td>
+            440
+          </td>
+          <td class="rate">
+            5
+          </td>
+          <tr>
+          <td>
+            480
+          </td>
+          <td class="rate">
+            6
+          </td>
+        </tr>
+        <tr>
+          <td>
+            520
+          </td>
+          <td class="rate">
+            7
+          </td>
+        </tr>
+        <tr>
+          <td>
+            560
+          </td>
+          <td class="rate">
+            8
+          </td>
+        </tr>
+        <tr>
+          <td>
+            600
+          </td>
+          <td class="rate">
+            9
+          </td>
+        </tr>
+        <tr>
+          <td>
+            640
+          </td>
+          <td class="rate">
+            10
+          </td>
+        </tr>
+        <tr>
+          <td>
+            680
+          </td>
+          <td class="rate">
+            11
+          </td>
+        </tr>
+        <tr>
+          <td>
+            720
+          </td>
+          <td class="rate">
+            12
+          </td>
+        </tr>
+        <tr>
+          <td>
+            760
+          </td>
+          <td class="rate">
+            13
+          </td>
+        </tr>
+        <tr>
+          <td>
+            816
+          </td>
+          <td class="rate">
+            14
+          </td>
+        </tr>
+        <tr>
+          <td>
+            872
+          </td>
+          <td class="rate">
+            15
+          </td>
+        </tr>
+        <tr>
+          <td>
+            928
+          </td>
+          <td class="rate">
+            16
+          </td>
+        </tr>
+        <tr>
+          <td>
+            984
+          </td>
+          <td class="rate">
+            17
+          </td>
+        </tr>
+        <tr>
+          <td>
+            1040
+          </td>
+          <td class="rate">
+            18
+          </td>
+        </tr>
+      </table>
+    </div>
+</main>
+ <side>
+</body>
+
+</html>

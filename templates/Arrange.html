@@ -1,0 +1,67 @@
+<html>
+<head>
+  <meta charset='utf-8'>
+  <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+  <meta name='robots' content='noindex,nofollow'>
+  <link rel="stylesheet" href="{{url_for('static',filename='arrange.css')}}">
+<link rel="stylesheet" href="/static/arrange.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+<body>
+    <main class="main">
+    <div class="score">    
+      <form action="{{url_for('Arrange')}}" method="POST">
+          <input type="text" name="text" required>
+          <button class="" >送信</button>
+      </form>
+      
+      <table>
+       <tr class="title">
+         
+         
+       </tr>
+      
+      <tr class="name">
+      
+       {% for number in numbers %}
+       <li class="todo-item">
+           <td>
+         <a href="/{{number}}">{{number}}</a>
+       </td>
+      
+      <form action="/numbers/destroy/{{number}}" method="POST">
+       <td>
+       <button class="todo-button" >削除</button>
+      </td>
+         
+      </td>
+      </tr>
+      </form>
+      
+      
+       </li>
+       {% endfor %}
+      
+      
+      </table>
+  
+    </div>  
+
+    <div class="sideber">
+    <p>
+        <a href="https://gigaplus.makeshop.jp/dartshive/pdf/masterout.pdf">Master Out</a>
+      </p>
+      
+      <p>
+          <a href="https://gigaplus.makeshop.jp/dartshive/pdf/doubleout.pdf">Double Out</a>
+      </p>
+      
+      <p>
+          <a href="https://gigaplus.makeshop.jp/dartshive/pdf/singleout.pdf">Single Out</a>
+      </p>
+    </div>
+      
+</body>
+</main>
+
+</html>

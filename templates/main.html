@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+<script src="{{url_for('static',filename='index.js')}}"></script>
+<link rel="stylesheet" href="./static/main.css">
+</head>
+
+<title>
+
+</title>
+
+<h1 class="main-title">
+  Darts
+</h1>
+
+<nav class="navi-item">
+  
+  <ul class="sentence">
+    {% for x in main %}
+    <li>
+      <a href="{{url_for(x)}}">{{x}} </a>
+    </li>
+    {% endfor %}
+  </ul>
+  <p class="count"></p>
+  <p class="arrange"></p>
+</nav>
+

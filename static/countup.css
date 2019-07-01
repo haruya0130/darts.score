@@ -1,0 +1,31 @@
+body {background-image: url("https://multi-images.s-darts.com/shopimages/er/a/era0002_01.jpg"); }
+
+.todo-item{
+   
+    text-decoration:none;
+    list-style: none;
+    text-decoration: underline;
+}
+.sideber{
+   color: brown
+}
+.rate{
+    text-align:  center; 
+    flex: auto
+}
+.main{
+    display: flex;
+    justify-content: center;
+
+}
+.sideber{
+padding: 60px 40px;
+color: white;
+background-color: yellow
+}
+
+.score{
+    padding: 10px;
+    color: white;
+    background-color: red
+}

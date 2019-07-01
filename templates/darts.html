@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+
+<head>
+<link rel="stylesheet" href="{{url_for('static',filename='index.css')}}">
+<script src="{{url_for('static',filename='index.js')}}"></script>
+<link rel="stylesheet" href="./static/darts.css">
+</head>
+
+<title>
+    aaa
+</title>
+
+<nav class="navi-item">
+  
+        <ul class="sentence">
+          {% for x in darts %}
+          <li>
+            <a href="{{url_for(x)}}">{{x}} </a>
+          </li>
+          {% endfor %}
+        </ul>
+      
+      </nav>
+      
